@@ -1,0 +1,15 @@
+*[Oo]bj/
+*[Bb]in/
+*.ncrunchproject
+*.ncrunchsolution
+_bin/
+buildoutput/
+*.config2
+*.config3
+*.sln.DotSettings
+*.pubxml
+*.pubxml.user
+*.suo
+*.user
+*.orig
+Deployment/
