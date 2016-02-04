@@ -3,7 +3,7 @@ using TutorHub.Data.Resources;
 
 namespace TutorHub.Data.Models
 {
-    public class User
+    public class LoginUser
     {
         public int Id { get; set; }
         public string Username { get; set; }

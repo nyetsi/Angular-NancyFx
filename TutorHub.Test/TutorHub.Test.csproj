@@ -58,6 +58,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="ApiTests\TestApiQueries.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserTests\UserQueryingTests.cs" />
   </ItemGroup>
@@ -69,6 +70,10 @@
     <Folder Include="TutorTests\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TutorHub.BL\TutorHub.BL.csproj">
+      <Project>{d238c9ed-d0bc-472a-a56c-45ad430ab4dc}</Project>
+      <Name>TutorHub.BL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TutorHub.Data\TutorHub.Data.csproj">
       <Project>{9d13cdb1-c82d-4d1a-9ee7-cbf665ba2b57}</Project>
       <Name>TutorHub.Data</Name>

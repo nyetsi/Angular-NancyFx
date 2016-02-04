@@ -1,0 +1,16 @@
+﻿@using System.Data.SqlClient
+
+
+<p>This content from the index page<p>
+    <h3>Partials</h3>
+<p>Login box below rendered via a partial view with no model.</p>
+<div id="login"></div>
+<p>Box below is rendered via a partial with a sub-model passed in.</p>
+<p>The submodel is a list which the partial iterates over with Each</p>
+<div id="users"></div>
+<h3>Encoding</h3>
+<p>Model output can also be encoded:</p>
+@foreach (var s in Model)
+{
+    <p>@s.Username</p>
+}

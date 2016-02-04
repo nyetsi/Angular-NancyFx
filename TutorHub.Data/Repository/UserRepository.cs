@@ -7,7 +7,7 @@ using TutorHub.Data.Resources;
 
 namespace TutorHub.Data.Repository
 {
-    public class UserRepository : IBaseRepository<User>
+    public class UserRepository : IBaseRepository<LoginUser>
     {
         private readonly IDataAccess dataAccess;
 
@@ -16,7 +16,7 @@ namespace TutorHub.Data.Repository
             this.dataAccess = dataAccess;
         }
 
-        public string Create(User user)
+        public string Create(LoginUser user)
         {
             using (var conn = dataAccess.Connect())
             {
@@ -28,22 +28,22 @@ namespace TutorHub.Data.Repository
             }
         }
 
-        public IEnumerable<User> GetList(int type)
+        public IEnumerable<LoginUser> GetList(int type)
         {
             using (var conn = dataAccess.Connect())
             {
                 var query = "Select * From [User] Where TypeId=" + type;
-                var result = conn.Query<User>(query);
+                var result = conn.Query<LoginUser>(query);
                 return result;
             }
         }
 
-        public User FindById(int id)
+        public LoginUser FindById(int id)
         {
             throw new System.NotImplementedException();
         }
 
-        public string Update(User entity)
+        public string Update(LoginUser entity)
         {
             throw new System.NotImplementedException();
         }

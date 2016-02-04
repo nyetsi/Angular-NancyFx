@@ -29,9 +29,9 @@ namespace TutorHub.Test.UserTests
         {
             Int32 type = 1;
             var access = Substitute.For<IDataAccess>();
-            var db = Substitute.For<IBaseRepository<User>>();
+            var db = Substitute.For<IBaseRepository<LoginUser>>();
 
-            var user = new User() {Username = "John",Password = "JJ23",UserTypeId = type};
+            var user = new LoginUser() {Username = "John",Password = "JJ23",UserTypeId = type};
 
             var result = db.Create(user);
 
