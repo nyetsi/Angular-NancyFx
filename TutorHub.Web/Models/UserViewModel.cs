@@ -16,25 +16,26 @@ namespace TutorHub.Web.Models
         public string Password { get; set; }
         public UserType UserType { get; set; }
 
-        public UserViewModel()
+        public List<UserViewModel> Users
         {
-            users = new List<UserViewModel>();
-        }
-
-        public UserViewModel(IEnumerable<LoginUser> usersList)
-        {
-            foreach (var user in usersList)
+            get
             {
-                MapToModel(user);
+                return users;
             }
         }
 
-        private void MapToModel(LoginUser user)
+        public UserViewModel()
         {
+        }
+
+        public UserViewModel(LoginUser user)
+        {
+            users = new List<UserViewModel>();
             Id = user.Id;
             Username = user.Username;
             Password = user.Password;
             UserType = user.UserType;
+            users.Add(this);
         }
     }
 }

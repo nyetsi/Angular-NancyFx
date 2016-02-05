@@ -11,7 +11,7 @@ namespace TutorHub.Test.ApiTests
         public void For_UserModule_Given_Repository_ResultsIs_GetResults()
         {
             IBaseRepository<LoginUser> repo;
-            
-      }
+
+        }
     }
 }
